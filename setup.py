@@ -1,6 +1,6 @@
 import os
 
-from setuptools import setup
+from setuptools import setup, find_packages
 from setuptools.command.develop import develop
 
 install_requires = set(x.strip() for x in open("requirements.txt"))
@@ -40,7 +40,7 @@ setup(
     license="MIT",
     keywords="QuarkChain,blockchain",
     url="",
-    packages=["quarkchain"],
+    packages=find_packages(),
     long_description=read("README.md"),
     classifiers=["Development Status :: 0 - Development", "License :: MIT License"],
     install_requires=install_requires,
